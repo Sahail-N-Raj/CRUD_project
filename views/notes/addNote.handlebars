@@ -1,0 +1,25 @@
+<section class="errorBlock">
+  <article>
+    {{#each errors}}
+      <h3 style="color: red;">{{errorText}}</h3>
+    {{/each}}
+  </article>
+</section>
+
+<section id="noteApp">
+  <article>
+    <h2>Add note list </h2>
+    <form method="post" action="/add-note">
+      <div class="form-group">
+        <label for="note_name">name of the note</label>
+        <input type="text" name="note_name" placeholder="enter note name" />
+
+      </div>
+      <div class="form-group">
+        <label for="note_description">Description</label>
+        <textarea name="note_description" id="note_description"></textarea>
+      </div>
+      <button>Create a note</button>
+    </form>
+  </article>
+</section>

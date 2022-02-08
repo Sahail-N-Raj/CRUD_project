@@ -1,0 +1,21 @@
+<section class="note_dec">
+  <article>
+
+    {{#each DATA}}
+      <div>
+        <h1>{{note_name}}</h1>
+        <p>{{note_description}}</p>
+        <footer class="btn-group">
+          <a href="/edit-note/{{_id}}">edit</a>
+
+          <form method="POST" action="/delete-note/{{_id}}?_method=DELETE">
+            <input type="hidden" name="_method" value="DELETE" />
+            <button class="btn">Delete</button>
+          </form>
+
+        </footer>
+      </div>
+    {{/each}}
+
+  </article>
+</section>
